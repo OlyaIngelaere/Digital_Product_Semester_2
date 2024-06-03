@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    text-align: center;
+    vertical-align: middle;
+    height: 200px;
+    padding-top: 75px;
+    animation-name: intro;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+p {
+    font-size: 20px;
+}
+
+h1, h2, h3, p{
+    padding: 10px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 15px;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+#advertisement {
+    display: none;
+}
+  
+@keyframes intro {
+    from  {
+        font-size: 50%;
+        color: white;
+        background-color: blue;
+        transform: translateY(-200px);
+    }
+
+    30% {
+        transform: translateY(0);
+    }
+
+    to {
+        font-size: 100%;
+        color: black;
+        background-color: cyan;
+    }
+  }
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 738px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #advertisement {
+        display: block;
+        animation-name: infinite;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+        animation-fill-mode: backwards;
+    }
+
+    @keyframes infinite {
+        0% {
+            background-color: cyan;
+            border-radius: 5px;
+            transform: scale(0.95);
+        }
+    
+        50% {
+            background-color: rgb(185, 185, 255);
+            border-radius: 10px;
+            transform: scale(1);
+        }
+    
+        100% {
+            background-color: cyan;
+            border-radius: 5px;
+            transform: scale(0.95);
+        }
+      }
+}
+
+@media (min-width: 1000px) {
+    .container {
+        max-width: 970px;
+    }
+}
