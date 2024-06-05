@@ -54,6 +54,17 @@ window.onload = function() {
             inputEmail.after(fragment);
         }
     }
+
+    var accordion = document.getElementById("accordion");
+    accordion.addEventListener("click", function() {    
+        //Show/hide the navigation when clicking the menu button
+        var navigation = document.getElementsByTagName("nav")[0];
+        if (navigation.style.display === "block") {
+            navigation.style.display = "none";
+        } else {
+            navigation.style.display = "block";
+        }
+    });
 }
 
 function addError(message)
