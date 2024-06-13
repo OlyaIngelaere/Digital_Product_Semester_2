@@ -8,18 +8,32 @@ body{
 }
 
 header {
-    height: 250px;
+    padding-top: 150px;
     text-align: center;
+    background-color: #001B36;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
     animation-name: intro;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
 #menu {
-    position: sticky;
+    position: fixed;
     top: 0px;
     z-index: 1;
-    background-color: beige;
+    background-color: #001B36;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#menu img {
+    margin: 10px;
+    max-height: 50px;
 }
 
 #accordion {
@@ -27,6 +41,7 @@ header {
 }
 
 nav {
+    margin: 0px 10px;
     padding: 30px;
     border-radius: 20px;
     display: none; 
@@ -34,8 +49,8 @@ nav {
 
 nav a {
     color: black;
-    margin: 10px;
     padding: 16px;
+    margin: 10px 0px;
     text-decoration: none;
     text-align: center;
     display: block;
@@ -60,6 +75,25 @@ h1, h2, h3, p{
     display: grid;
     grid-template-columns: 100%;
     margin: 0 15px;
+}
+
+#advertisement, .advertisement {
+    display: none;
+}
+
+#background {
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001B36;
+}
+
+#success, #calendar {
+    display: none;
+    opacity: 0;
+    font-size: 36px;
+    color: greenyellow;
 }
 
 form {
@@ -113,12 +147,27 @@ button:hover {
     border-bottom: 1px solid lightblue;
 }
   
+footer {
+    width: 100%;
+    padding-top: 10px; 
+    color: white;
+    background-color: #001B36;
+    overflow-wrap: break-word;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: lightblue;
+}
   
 @keyframes intro {
     from  {
         font-size: 50%;
-        color: white;
-        background-color: blue;
+        color: black;
+        height: 100px;
         transform: translateY(-200px);
     }
 
@@ -128,14 +177,22 @@ button:hover {
 
     to {
         font-size: 100%;
-        color: black;
-        background-color: cyan;
+        color: white;
+        height: 300px;
     }
   }
 
 @media (min-width: 768px) {
+
+    #menu img {
+        transition: transform 1s ease-out; 
+    }
+
+    #menu img:hover {
+        transform: rotate(360deg);
+    }
+
     header{
-        padding-top: 80px;
         border-radius: 0 0 100% 100% ;
     }
 
@@ -151,16 +208,15 @@ button:hover {
 
     nav a {
         display: inline-block;
-        border-bottom: 3px solid black;
-        transition: border-bottom 0.5s ease-out;
+        transition: padding 0.5s ease-out;
     }
 
     nav a:hover {
-        border-bottom: 10px solid black;
+        padding: 10px;
     }
 
     .container {
-        margin: 0 auto;
+        margin: 15px auto;
         max-width: 738px;
     }
 
@@ -168,9 +224,19 @@ button:hover {
         display: grid;
         grid-template-columns: 50% 50%;
         margin: 40px;
+    } 
+
+    .advertisement {
+        display: inline;
     }
 
     #advertisement {
+        display: block;
+    }
+
+    #advertisement h1 {
+        color: white;
+        margin-bottom: 10px;
         animation-name: infinite;
         animation-duration: 3s;
         animation-iteration-count: infinite;
@@ -186,22 +252,26 @@ button:hover {
         margin: 30px;
     }
     
-
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    
     @keyframes infinite {
         0% {
-            background-color: cyan;
+            background-color: #028FC7;
             border-radius: 5px;
             transform: scale(0.95);
         }
     
         50% {
-            background-color: rgb(185, 185, 255);
+            background-color: #001B36;
             border-radius: 10px;
             transform: scale(1);
         }
     
         100% {
-            background-color: cyan;
+            background-color: #028FC7;
             border-radius: 5px;
             transform: scale(0.95);
         }

@@ -8,13 +8,12 @@
 </head>
 <body>
     <div id="menu">
+        <img src="img/logo.jfif" alt="logo">
         <button id="accordion">Menu</button>
         <nav>
-            <a href="#info">General Info</a>
-            <a href="#prototype">Prototype</a>
-            <a href="#advertisement">Advertisement</a>
+            <a href="#">General Info</a>
+            <a href="#advertisement" class="advertisement">Advertisement</a>
             <a href="#contact">Contact</a>
-            <a href="#games">Games</a>
         </nav>
     </div>
     <header>
@@ -22,63 +21,80 @@
         <p>Daily tests to optimize your schedule aligned with your performance.</p>
     </header>
     <main>
-        <div id="info" class="container">
-            <h1>General Info</h1>
-            <div class="grid">
-                <div>
-                    <h3>Do you feel tired while studying, working or any other activities that require your full attention?</h3>
-                    <p>
-                        And feel energetic at moments you don't have anything to do?
-                        With this app you will be able to predict when you will have your best performance and optimize your daily routine.
-                    </p>
-                </div>
-                <div>
-                    <h3>Unsure if you have time to do daily tests?</h3>
-                    <p>
-                        These tests require only a couple of minutes on several moments of your day, but you will easily get this time back through optimized time management.
-                    </p> 
-                </div>
-                <div>
-                    <h3>Do cognitive tests sound boring to you?</h3>
-                    <p>                  
-                        All tests have been gamified. So have fun playing the games and we do the analytics for you. We add new games reguraly, so you will never get bored. Just sit back and relax!
-                    </p>
-                </div>
-                <div>
-                    <h3>How do you know we are reliable?</h3>
-                    <p>
-                        Our tests and analysis is based on the scientific research of many univerities and scientists. We keep our test up-to-date to the latest findings.
-                    </p>
+        <section>
+            <div id="info" class="container">
+                <h1>General Info</h1>
+                <div class="grid">
+                    <div>
+                        <h3>Do you feel tired while studying, working or any other activities that require your full attention?</h3>
+                        <p>
+                            And feel energetic at moments you don't have anything to do?
+                            With this app you will be able to predict when you will have your best performance and optimize your daily routine.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Unsure if you have time to do daily tests?</h3>
+                        <p>
+                            These tests require only a couple of minutes on several moments of your day, but you will easily get this time back through optimized time management.
+                        </p> 
+                    </div>
+                    <div>
+                        <h3>Do cognitive tests sound boring to you?</h3>
+                        <p>                  
+                            All tests have been gamified. So have fun playing the games and we do the analytics for you. We add new games reguraly, so you will never get bored. Just sit back and relax!
+                        </p>
+                    </div>
+                    <div>
+                        <h3>How do you know we are reliable?</h3>
+                        <p>
+                            Our tests and analysis is based on the scientific research of many univerities and scientists. We keep our test up-to-date to the latest findings.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="prototype" class="container">
-            <h1>Prototype</h1>
-        </div>
-        <div id="advertisement" class="container">
-            <h1>Advertisement</h1>
-        </div>
-        <div id="contact" class="container">
-            <h1>Contact</h1>
-            <div class="container">
-                <form id="contactForm" method="POST">
-                    <div class="group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="If you have any inquiries, don't hesitate to contact me."></textarea>
-                    </div>
-                    <div class="group">
-                        <label for="firstname">First Name</label>
-                        <input id="firstname" type="text" name="firstname" placeholder="First name">
-                        <label for="lastname">Last Name</label>
-                        <input id="lastname" type="text" name="lastname" placeholder="Last name">
-                        <label for="email">Email</label>
-                        <input id="email" type="text" name="email" placeholder="Email">
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
+        </section>   
+        <section>
+            <div id="advertisement" class="container">
+                <h1>Advertisement</h1>
+                <div id="background">
+                    <div id="brain"><img src="img/brain.png"></div>     
+                    <p id="success">Success!</p>
+                    <div id="papers"><img src="img/papers.png"></div>  
+                    <div id="logo"><img src="img/logo.jfif"></div>
+                    <div id="sad"><img src="img/sad.png"></div>
+                    <div id="calendar"><img src="img/calendar.png"></div>
+                    <div id="controller"><img src="img/controller.png"></div>
+                </div>
             </div>
-        </div>
-    </main>  
+        </section>                
+        <section>
+            <div id="contact" class="container">
+                <h1>Contact</h1>
+                <div class="container">
+                    <form id="contactForm" method="POST">
+                        <div class="group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="If you have any inquiries, don't hesitate to contact me."></textarea>
+                        </div>
+                        <div class="group">
+                            <label for="firstname">First Name</label>
+                            <input id="firstname" type="text" name="firstname" placeholder="First name">
+                            <label for="lastname">Last Name</label>
+                            <input id="lastname" type="text" name="lastname" placeholder="Last name">
+                            <label for="email">Email</label>
+                            <input id="email" type="text" name="email" placeholder="Email">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main> 
+    <footer>
+        <p>Copyright &copy; 2024 All Rights Reserved by Olga Ingelaere</p>
+        <p><a href=“mailto:r0943033@student.thomasmore.be”>r0943033@student.thomasmore.be</a></p>
+    </footer> 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>

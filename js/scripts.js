@@ -1,8 +1,23 @@
 // We wait to execute the javascript untill all the HTML has finished loading
 window.onload = function() {
+    var tl = gsap.timeline({repeat: 3, repeatDelay: 1});
+    tl.from("#papers", {scale: 0.6, duration: 3, ease: "expo.in"});
+    tl.from("#sad", {scale: 0.4, duration: 4, ease: "expo.in"}, 0);
+    tl.to("#papers", {opacity: 0, display: "none", duration: 2}, 3);
+    tl.to("#sad", {opacity: 0, display: "none", duration: 1}, 4);
+    tl.from("#brain", {opacity: 0, duration: 1});
+    tl.from("#controller", {opacity: 0, duration: 1}, 5);
+    tl.to("#brain", {rotation: 360, x: 330, duration: 3, ease: "bounce"});
+    tl.to("#controller", {x: -330, duration: 3, ease: "bounce"}, 6);
+    tl.to("#brain", {opacity: 0, duration: 1});
+    tl.to("#controller", {opacity: 0, duration: 1}, 9);
+    tl.from("#logo", {opacity: 0, scale: 0.6, duration: 2}, 9);
+    tl.to("#logo", {opacity: 0, display: "none", duration: 2});
+    tl.to("#success", {opacity: 1, display: "block", scale: 1.2, duration: 2});
+    tl.to("#calendar", {opacity: 1, display: "block", rotation: -20, duration: 2}, 13);
+    
     // Get form element
     let form = document.getElementById("contactForm");
-    
     // Get input element
     let inputEmail = document.getElementById("email");
     
@@ -36,7 +51,7 @@ window.onload = function() {
                 alertElement[0].remove();
             }
 
-            addError("Your email doesn't containt '<b>@</b>', please try again."); 
+            addError("Your email doesn't contain '<b>@</b>', please try again."); 
         }
         else
         {
